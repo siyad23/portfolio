@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #fbf1d2;
+  --secondary-color: #282828;
+  --bg-color: #374363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg-color);
+}
+
+/* navBar */
+nav {
+  cursor: pointer;
+}
+nav .nav_button {
+  position: fixed;
+  top: 40px;
+  left: 30px;
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+}
+
+nav .nav_button::before,
+nav .nav_button::after {
+  content: "";
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+}
+
+nav .nav_button::after {
+  transform: translateY(20px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home */
+.home {
+  display: flex;
+}
+.home #name {
+  font-family: "Bangers", cursive;
+  color: var(--primary-color);
+}
+
+.home #image img {
+}
