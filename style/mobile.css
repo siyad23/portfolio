@@ -2,10 +2,7 @@
 @media screen and (max-width: 600px) {
   .home {
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    height: 52vh;
-    width: 50vw;
   }
   .home #name {
     font-size: 25vw;
@@ -13,18 +10,40 @@
   }
 
   .home #image img {
-    max-width: 70vw;
+    max-width: 90vw;
+  }
+
+  .edu {
+    padding: 0 2rem;
+  }
+
+  .edu section.ssc {
+    align-self: flex-start;
+  }
+
+  .edu section.ssc .title {
+    align-self: flex-start;
+  }
+
+  .edu section.ssc p {
+    top: -3.5rem;
+    left: 8rem;
+  }
+
+  .edu section.ssc .line {
+    left: 0;
+  }
+  .edu section p {
+    max-width: 10rem;
   }
 }
 
 /* tablet */
-@media screen and (max-width: 1200px) and (min-width: 601px) {
+@media screen and (max-width: 899px) and (min-width: 601px) {
   .home {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 52vh;
-    width: 50vw;
   }
   .home #name {
     font-size: 22vw;
@@ -32,6 +51,29 @@
   }
 
   .home #image img {
-    max-width: 60vw;
+    max-width: 90vw;
+  }
+}
+
+/* wideScreen */
+@media screen and (min-width: 900px) {
+  .home {
+    height: 100vh;
+    width: 98vw;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .home #name {
+    transform: translateX(2rem);
+    font-size: 13rem;
+  }
+  .home #image {
+    align-self: flex-end;
+  }
+
+  .home #image img {
+    align-self: flex-end;
+    width: 70vw;
   }
 }

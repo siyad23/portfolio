@@ -2,6 +2,23 @@
   --primary-color: #fbf1d2;
   --secondary-color: #282828;
   --bg-color: #374363;
+  --title-color: #6ff1fc;
+}
+
+::-webkit-scrollbar {
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #465580;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd19c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffa46f;
 }
 
 * {
@@ -15,16 +32,20 @@ body {
   background-color: var(--bg-color);
 }
 
+.bold {
+  font-weight: 600;
+}
+
 /* navBar */
 nav {
   cursor: pointer;
 }
 nav .nav_button {
   position: fixed;
-  top: 40px;
-  left: 30px;
-  height: 4px;
-  width: 30px;
+  top: 2.5rem;
+  left: 1.8rem;
+  height: 0.25rem;
+  width: 2rem;
   border-radius: 2px;
   background-color: var(--primary-color);
 }
@@ -33,26 +54,37 @@ nav .nav_button::before,
 nav .nav_button::after {
   content: "";
   position: fixed;
-  top: 30px;
-  left: 30px;
-  height: 4px;
-  width: 30px;
+  top: 1.9rem;
+  left: 1.8rem;
+  height: 0.25rem;
+  width: 2.5rem;
   border-radius: 2px;
   background-color: var(--primary-color);
 }
 
 nav .nav_button::after {
-  transform: translateY(20px);
+  transform: translateY(1.2rem);
 }
 
 .container {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  scroll-snap-align: start;
 }
 
 /* Home */
 .home {
-  display: flex;
+  justify-content: space-between;
 }
 .home #name {
   font-family: "Bangers", cursive;
@@ -60,4 +92,59 @@ nav .nav_button::after {
 }
 
 .home #image img {
+}
+
+.edu {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.edu header h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.edu section.exam {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 200ms ease-in-out;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.edu section.exam:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.edu section .title {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.edu section.exam .line {
+  height: 7rem;
+  width: 3px;
+  background-color: var(--primary-color);
+  margin: 0 2rem;
+}
+
+.edu section.exam .discription ul li {
+  list-style-type: none;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.edu section.exam:hover {
+  transform: scale(1.2);
+  background-color: #465580;
+}
+
+.edu section.exam .discription ul li span.bold {
+  margin: 0 15px;
 }
