@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="./style/mobile.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,17 +29,29 @@
     <!-- Navbar -->
     <nav>
       <div class="nav_button"></div>
+
+      <div class="nav_page">
+        <ul>
+          <li class="nav_link"><a href="#home">Home</a></li>
+          <li class="nav_link"><a href="#edu">Education</a></li>
+          <li class="nav_link"><a href="#skill">Skills</a></li>
+          <li class="nav_link"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <input type="checkbox" class="toggler" />
+      <div class="overlay"></div>
     </nav>
     <!-- Name -->
-    <div class="container">
-      <section class="home page">
+    <div class="containers">
+      <!-- Home -->
+      <section id="home" class="home page">
         <h1 id="name">Siyad</h1>
         <div id="image">
           <img src="./images/mainPotrait.png" alt="potrait" />
         </div>
       </section>
-
-      <section class="edu page">
+      <!-- Edu -->
+      <section id="edu" class="edu page">
         <header><h1>Education</h1></header>
         <section class="hsc exam">
           <h1 class="title">HSC</h1>
@@ -74,6 +93,64 @@
           </div>
         </section>
       </section>
+
+      <table></table>
+      <section id="skill" class="skills page">
+        <header><h1>Skills</h1></header>
+        <div class="container">
+          <div class="box">HTML</div>
+          <div class="box">CSS</div>
+          <div class="box">Javascript</div>
+          <div class="box">Arduino</div>
+          <div class="box">Python</div>
+          <div class="box">C/C++</div>
+          <div class="box">Photoshop</div>
+          <div class="box">3d design</div>
+        </div>
+      </section>
+      <section id="contact" class="contact page">
+        <header><h1>Contact</h1></header>
+        <div class="contact-box m-3">
+          <ul>
+            <li class="p-1">
+              <img src="images\mail.svg" alt="" />
+              <a href="mailto:siyad2240@gmail.com" target="_blank"
+                >siyad2240@gmail.com</a
+              >
+            </li>
+            <li class="p-1">
+              <img src="images\facebook.svg" alt="" />
+              <a href="https://www.facebook.com/siyadkhan23/" target="_blank"
+                >Rahat Khan Siyad</a
+              >
+            </li>
+            <li class="p-1">
+              <img src="images\instagram.svg" alt="" />
+              <a
+                href="https://www.instagram.com/rahat_khan_siyad/"
+                target="_blank"
+                >rahat_khan_siyad</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -14,27 +14,19 @@
   }
 
   .edu {
-    padding: 0 2rem;
+    padding: 0 0rem;
+    /* display: none; */
   }
 
-  .edu section.ssc {
-    align-self: flex-start;
+  .edu section.exam {
+    max-width: 25rem;
+    padding: 0rem;
   }
-
-  .edu section.ssc .title {
-    align-self: flex-start;
+  .skills .container {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .edu section.ssc p {
-    top: -3.5rem;
-    left: 8rem;
-  }
-
-  .edu section.ssc .line {
-    left: 0;
-  }
-  .edu section p {
-    max-width: 10rem;
+  .skills .container .box {
+    padding: 2rem;
   }
 }
 
@@ -52,6 +44,18 @@
 
   .home #image img {
     max-width: 90vw;
+  }
+
+  .edu section.exam {
+    max-width: 27rem;
+    padding: 0rem;
+  }
+  .skills .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills .container .box {
+    
+    padding: 2.5rem;
   }
 }
 
